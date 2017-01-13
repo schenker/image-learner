@@ -32,7 +32,7 @@ See implementation in [image-learner.ipynb](image-learner.ipynb)
 
 ### Input:
 ![example1](/images/bunt.jpg?raw=true)
-### Sample Outputs:)
+### Sample Outputs:
 #### after 7 epochs with a network of width 6 and depth 25
 ![example1](/images/bunt_epoch_0007_width_006_depth_025.jpg?raw=true))
 #### after 45 epochs with a network of width 6 and depth 25
