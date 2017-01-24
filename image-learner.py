@@ -32,7 +32,6 @@ im = Image.open(input_image)
 plt.imshow(np.asarray(im))
 pylab.axis('off')
 
-#im = np.asarray(im)[0::6,0::6]
 im = np.asarray(im)
 
 shape = im.shape;
