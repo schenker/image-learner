@@ -133,7 +133,7 @@ def iterate_minibatches(pos, targets, batchsize, shuffle=False):
         
 def save_reconstruction(iteration, width, depth):
     start = time.time()
-    print("saving to " + "epoch_%04d_width_%03d_depth_%03d" % (iteration, width, depth)+".jpg")  
+    print("saving to " + output_prefix + "_epoch_%04d_width_%03d_depth_%03d" % (iteration, width, depth)+".jpg")  
     reconstruct = lasagne.layers.get_output(layer_last, deterministic=True)
     reconstruct_fn = theano.function([positions_data], reconstruct)
     reconstructed = np.asarray(im).astype('float64')
@@ -161,7 +161,7 @@ def save_reconstruction(iteration, width, depth):
                  reconstructed[x,y,2] = 255
 
     j = Image.fromarray(reconstructed.astype('uint8'))                                       
-    j.save((output_prefix+"_epoch_%04d_width_%03d_depth_%03d" % (iteration, width, depth))+".jpg")
+    j.save((output_prefix + "_epoch_%04d_width_%03d_depth_%03d" % (iteration, width, depth))+".jpg")
     
     
 minibatchsize = 150
